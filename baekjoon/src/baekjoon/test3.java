@@ -1,7 +1,7 @@
 package baekjoon;
 //단계별로 풀어보기
 //입출력과 사칙연산
-//10718번
+//10171번
 public class test3 {
 
 	public static void main(String[] args) {
