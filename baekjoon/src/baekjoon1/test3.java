@@ -1,4 +1,4 @@
-package baekjoon;
+package baekjoon1;
 //단계별로 풀어보기
 //입출력과 사칙연산
 //10171번
