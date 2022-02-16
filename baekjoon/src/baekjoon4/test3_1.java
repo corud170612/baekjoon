@@ -1,6 +1,10 @@
 package baekjoon4;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 //단계별로 풀어보기
 //while문
@@ -21,28 +25,31 @@ import java.util.Scanner;
 //출력
 //첫째 줄에 N의 사이클 길이를 출력한다.
 
-//스캐너 사용해서 만들기
-public class test3 {
+//버퍼리더 사용해서 만들기, 버퍼라이터로 출력도 해보기
+public class test3_1 {
 //알고리즘 먼저 짜기, 굿노트 참고
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		int N = sc.nextInt();//숫자 입력
-		int copy = N;//처음 입력값을 복사한 변수 copy
-		int count = 0;//반복문이 몇 번 반복되었는지 세어주는 변수 count
+		int N = Integer.parseInt(br.readLine());
+		int copy = N;
+		int count = 0;
 		
 		while(true) {
-		//아래 알고리즘을 반복하기 위해 while문 안에 넣어준다
 			N = ((N%10)*10) + (((N/10)+(N%10))%10);
-			count++;//반복문은 증가함
+			count++;
 			
 			if(copy==N) {
-			//만약에 처음 입력값과 새로운 변수가 같을 경우 반복문을 종료
 				break;
 			}
+			
 		}
-		System.out.println(count);
+		bw.write(count + "\n");
+		br.close();
+		bw.flush();
+		bw.close();
 		
 	}
 
